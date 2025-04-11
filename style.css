@@ -1,0 +1,131 @@
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+  z-index: -1;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  background-color: transparent;
+}
+.logo {
+  font-size: 2rem;
+  color: #007BFF;
+  font-weight: bold;
+}
+nav a {
+  margin: 0 1rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+nav a.active, nav a:hover {
+  color: #007BFF;
+}
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  padding: 2rem;
+  background: transparent;
+  position: relative;
+  transform-origin: top;
+  will-change: transform, opacity;
+}
+.hero h1 {
+  font-size: 4rem;
+}
+.hero h1 span {
+  color: #007BFF;
+}
+.hero .hello {
+  display: none;
+}
+.hero .welcome {
+  font-size: 6rem;
+  color: white;
+  margin-bottom: 2rem;
+  font-weight: 800;
+}
+.hero p {
+  font-size: 2rem;
+}
+.projects {
+  height: 100vh;
+  padding: 4rem 2rem;
+  background-color: #f5f5f5;
+  color: #111;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.projects h2 {
+  font-size: 5rem;
+  margin-bottom: 3rem;
+  color: #007BFF;
+}
+.project-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.project-item {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  width: 300px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.project-item h3 {
+  color: #007BFF;
+  margin-bottom: 0.5rem;
+}
+.about {
+  background-color: #fff;
+  color: #111;
+  padding: 4rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.about img {
+  width: 200px;
+  border-radius: 20px;
+}
+.about-text h2 {
+  margin-bottom: 1rem;
+}
+footer {
+  background-color: #0d0c1d;
+  text-align: center;
+  padding: 2rem;
+  color: #aaa;
+  display: block; /* Make sure the footer takes up the full width */
+}
+
+footer span {
+  display: block; /* Ensure each line is on its own line */
+  margin-bottom: 10px; /* Adds some space between the lines */
+}
