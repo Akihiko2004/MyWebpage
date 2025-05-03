@@ -1,4 +1,4 @@
-{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -70,7 +70,7 @@ nav a.active, nav a:hover {
   font-size: 2rem;
 }
 .projects {
-  height: 100vh;
+  min-height: 100vh;
   padding: 4rem 2rem;
   background-color: #f5f5f5;
   color: #111;
@@ -90,6 +90,11 @@ nav a.active, nav a:hover {
   justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
+  max-width: 1200px;
+}
+.project-link {
+  text-decoration: none;
+  color: inherit;
 }
 .project-item {
   background: #fff;
@@ -97,6 +102,11 @@ nav a.active, nav a:hover {
   border-radius: 12px;
   width: 300px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
 }
 .project-item h3 {
   color: #007BFF;
@@ -122,10 +132,9 @@ footer {
   text-align: center;
   padding: 2rem;
   color: #aaa;
-  display: block; /* Make sure the footer takes up the full width */
+  display: block;
 }
-
 footer span {
-  display: block; /* Ensure each line is on its own line */
-  margin-bottom: 10px; /* Adds some space between the lines */
+  display: block;
+  margin-bottom: 10px;
 }
