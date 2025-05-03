@@ -96,17 +96,20 @@ nav a.active, nav a:hover {
   text-decoration: none;
   color: inherit;
 }
+.project-link:hover {
+  text-decoration: none;
+}
 .project-item {
   background: #fff;
   padding: 1.5rem;
   border-radius: 12px;
   width: 300px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .project-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 .project-item h3 {
   color: #007BFF;
