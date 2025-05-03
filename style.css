@@ -142,8 +142,6 @@ nav a:hover, nav a.active {
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
-  min-height: 100vh;
-  text-align: center;
 }
 .about img {
   width: 200px;
@@ -155,6 +153,7 @@ nav a:hover, nav a.active {
 }
 .about-text h2 {
   margin-bottom: 1.5rem;
+  text-align: center;
 }
 .about-text p {
   margin-bottom: 1rem;
@@ -217,12 +216,14 @@ footer span {
   }
   .about {
     flex-direction: column;
-    text-align: center;
+    text-align: left;
     padding: 2rem;
-    min-height: auto;
   }
   .about-text {
     min-width: 100%;
+  }
+  .about-text h2 {
+    text-align: center;
   }
   .about img {
     margin: 0 auto;
