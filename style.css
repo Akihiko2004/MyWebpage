@@ -138,15 +138,35 @@ nav a:hover, nav a.active {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 2rem;
   justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+  text-align: center;
 }
 .about img {
   width: 200px;
   border-radius: 20px;
 }
+.about-text {
+  flex: 1;
+  min-width: 300px;
+}
 .about-text h2 {
+  margin-bottom: 1.5rem;
+}
+.about-text p {
   margin-bottom: 1rem;
+  line-height: 1.6;
+}
+.about-text a {
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: 600;
+}
+.about-text a:hover {
+  text-decoration: underline;
 }
 footer {
   background-color: #0d0c1d;
@@ -198,6 +218,14 @@ footer span {
   .about {
     flex-direction: column;
     text-align: center;
+    padding: 2rem;
+    min-height: auto;
+  }
+  .about-text {
+    min-width: 100%;
+  }
+  .about img {
+    margin: 0 auto;
   }
   header {
     flex-direction: column;
