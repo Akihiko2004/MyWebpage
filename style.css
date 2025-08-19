@@ -5,6 +5,7 @@
 }
 html {
   scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
 }
 body {
   font-family: 'Poppins', sans-serif;
@@ -45,14 +46,16 @@ nav a {
 nav a:hover, nav a.active {
   color: #007BFF;
 }
-.hero {
+.hero, .about, .projects, .footer {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  min-height: 100vh;
+  scroll-snap-align: start;
   padding: 2rem;
+}
+.hero {
   background: transparent;
 }
 .hero h1 {
@@ -74,14 +77,8 @@ nav a:hover, nav a.active {
   font-size: 1.8rem;
 }
 .projects {
-  min-height: 100vh;
-  padding: 4rem 2rem;
   background-color: #f5f5f5;
   color: #111;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 .projects h2 {
   font-size: 4rem;
@@ -134,13 +131,8 @@ nav a:hover, nav a.active {
 .about {
   background-color: #fff;
   color: #111;
-  padding: 4rem 2rem;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 2rem;
   width: 100%;
-  min-height: 100vh;
+  padding: 4rem 2rem;
 }
 .about-content {
   max-width: 1200px;
@@ -174,15 +166,52 @@ nav a:hover, nav a.active {
 .about-text a:hover {
   text-decoration: underline;
 }
-footer {
-  background-color: #0d0c1d;
+.footer {
+  background: linear-gradient(135deg, #0d0c1d 0%, #1a1a3d 100%);
+  color: #fff;
   text-align: center;
-  padding: 2rem;
-  color: #aaa;
 }
-footer span {
-  display: block;
-  margin-bottom: 10px;
+.footer h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #007BFF;
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.contact-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+.contact-item:nth-child(1) { animation-delay: 0.1s; }
+.contact-item:nth-child(2) { animation-delay: 0.2s; }
+.contact-item:nth-child(3) { animation-delay: 0.3s; }
+.contact-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+.contact-item i {
+  font-size: 1.5rem;
+  color: #007BFF;
+}
+.contact-item a, .contact-item span {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+.contact-item a:hover {
+  text-decoration: underline;
 }
 .back-to-top {
   position: fixed;
@@ -222,9 +251,7 @@ footer span {
     max-width: 350px;
   }
   .about {
-    flex-direction: column;
     padding: 2rem;
-    min-height: auto;
   }
   .about-content {
     flex-direction: column;
@@ -237,6 +264,12 @@ footer span {
   }
   .about img {
     margin: 0 auto;
+  }
+  .footer h2 {
+    font-size: 2rem;
+  }
+  .contact-item {
+    padding: 0.8rem 1rem;
   }
   header {
     flex-direction: column;
